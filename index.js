@@ -65,7 +65,7 @@ app.get("/aeroX", (req, res) => {
   app.get("/skyProbe", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'skyProbe.html'));
   });
-  app.get("/vichaar", (req, res) => {
+  app.get("/events", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'vichaar.html'));
   });
   app.get("/words_with_wings", (req, res) => {
