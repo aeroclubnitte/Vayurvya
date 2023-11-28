@@ -103,10 +103,7 @@
       }
 
       table td::before {
-        /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
+       
         float: none;
         font-weight: bold;
         text-transform: uppercase;
@@ -127,19 +124,15 @@
         display: none;
       }
 
-      /* Styles for screens smaller than 767px */
+    
       body {
         font-size: 12px;
-        /* Adjust font size for smaller screens */
       }
 
-      /* Media query for mobile devices */
 
       l-wrapper {
         width: 50%;
-        /* Use percentages for width */
         max-width: 144px;
-        /* Set a max-width if needed */
         margin: 0 auto;
       }
 
@@ -164,29 +157,23 @@
       /* Styles for screens between 768px and 1023px */
       body {
         font-size: 14px;
-        /* Adjust font size for medium-sized screens */
       }
 
-      /* Add more styles as needed */
       .about {
         display: inline-block;
         flex-direction: column;
       }
     }
 
-    /* Add more media queries for larger screens if necessary */
 
     .l-wrapper {
       width: 90%;
-      /* Use percentages for width */
       max-width: 1440px;
-      /* Set a max-width if needed */
       margin: 0 auto;
     }
 
     .intro--options>a {
       max-width: 90%;
-      /* Make images responsive */
     }
 
     img {
@@ -805,26 +792,29 @@
     }
 
 
-
     .about-me-flex-container .about-me-content .text {
-      color: #87A4B6;
+      color: white;
       font-weight: 600;
       margin-top: 5%;
-      font-size: 15px;
+      font-size: 18px;
     }
 
 
-    @media only screen and (max-width:476px) {
+    @media only screen and (max-width:376px) {
       .intro a {
         margin-left: -28.5% !important;
         width: 330px !important;
-        margin-bottom: 8% !important;
+        margin-bottom: 20% !important;
         font-size: 13px;
 
       }
 
+      .scroll{
+        margin-left: -70% !important;
+        margin-bottom: 20%;
+        
 
-
+      }
       .days,
     .hours,
     .minutes,
@@ -912,6 +902,22 @@
       .about-me-flex-container .text .secondline {
         display: none;
       }
+      
+    }
+
+    @media only screen and (min-width:768px) and (max-width:978px){
+      .about-me-flex-container .about-me-image{
+
+        margin-left:-10% !important;
+
+      }
+      .about-me-flex-container .text {
+        height: 200px !important;
+        width: 400px;
+        margin-top: 30px !important;
+
+
+      }
     }
 
     @media screen and (max-width: 600px) {
@@ -927,8 +933,8 @@
 
         overflow: hidden;
         width: 460px !important;
-        margin-top: -60% !important;
-        margin-left: -1% !important;
+        margin-top: -35% !important;
+        margin-left: 0% !important;
         height: 400px;
       }
 
@@ -941,6 +947,12 @@
         margin-top: 5%;
       }
 
+      .container-11 .card-11 {
+      flex: 1;
+      transition: all 1s ease-in-out;
+      height: 80vmin;
+      position: relative;
+    }
 
       .about-me-title {
         font-size: 2px;
@@ -972,6 +984,19 @@
       .about-me-flex-container .about-me-image {
         margin-top: 7%;
       }
+
+      .scroll{
+        margin-left: 46% !important;
+      }
+      
+
+
+      .container-11 .card-11 {
+      flex: 1;
+      transition: all 1s ease-in-out;
+      height: 80vmin;
+      position: relative;
+    }
 
       .container-10022 #timer {
         position: relative;
@@ -1280,7 +1305,119 @@
       -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
       clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     }
+
     #more {display: none;}
+
+
+
+
+
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+.scroll {
+	width: 60px;
+	height: 60px;
+	border: 2px solid white
+	border-radius: 50%;
+	position: relative;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 2px solid wheat;
+  	border-bottom: 2px solid white;
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+.arrow {
+	width: 0;
+	height: 40px;
+	border: 1px solid white;
+	position: relative;
+	animation: scroll 1.5s infinite;
+	-webkit-animation: scroll 1.5s infinite;
+	&::after {
+		content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    width: 1px;
+    height: 10px;
+		
+		// triangle
+    border-top: 10px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+} 
   </style>
 </head>
 
@@ -1329,13 +1466,14 @@
             </ul>
           </nav>
           <ul class="l-main-content main-content">
+        
+
             <li class="l-section section section--is-active">
               <div class="intro" style="margin-top:-3% ;">
 
                 <img src="./assets/img/Vayurvya_Logo.png"
                   style="height: 250px; width: 470px; margin-top: 20%; margin-bottom: -10%;" class="vayu_logo"
                   alt="Vayurvya_logo">
-
 
                 <div class="intro--banner"><br><br>
                   <!-- <h1 style="margin-top: -3%;" class="tagline"><span style="font-size:30px;">A Decade Of Legacy</span>
@@ -1380,16 +1518,17 @@
 
                 </div>
 
-                <div class="button-10a" style="margin-top: -1%; margin-left: 22%;  width: 100%; ">
+                <div class="button-10a" style="margin-top: 1%; margin-left: 22%;  width: 100%; ">
                   <a href="#eventsList">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     REGISTRATIONS WILL OPEN SOON!! </a>
+                    
                 </div>
 
-
+                <div class="scroll" style=" margin-left: 48%; height: 20px; width: 20px; margin-top: -3%;"></div>
 
 
                 <div class="intro--options">
@@ -1408,8 +1547,8 @@
 
 
             <li class="l-section section">
-              <section class="about-me" id="about-me " style="width: 80%; margin-left: 10%;">
-                <div class=".container-1111 ">
+              <section class="about-me" id="about-me " style="width: 80%; margin-left: 10%; margin-top: 3%;">
+                <div class=".container-1111">
                   <div class="about-me-container">
                     <div class="about-me-title" style="font-family: 'Kanit', sans-serif; margin-top: 0%;">
                       About Vayurvya
@@ -1427,7 +1566,7 @@
                         <div class="logo" style="margin-bottom: -8%;"><img
                             src="/assets/img/ac_logo-removebg-preview1.png" alt="smit"></div>
 
-                       <div class="text">
+                        <div class="text">
                           <div class="firstline"> Welcome to Vayurvya, a celebration of a decade of excellence by Aero
                             Club Nitte! In honor of our 10th-year anniversary, we proudly present a national-level
                             competition featuring thrilling RC modeling contests, enlightening talks, engaging paper
@@ -1437,12 +1576,17 @@
                             <span id="more"> <div class="secondline"> Let's make Vayurvya a
                             testament to our passion for aviation and the remarkable journey of Aero Club Nitte. </div></span>
                             
-                            <button onclick="myFunction()" id="myBtn" style="background-color: transparent; border: 0px;">Read more...</button>
+                            <button onclick="myFunction()" id="myBtn" style="background-color: transparent; border: 0px;">Read more</button>
+
+
+
+                          <!-- <div class="secondline"> Smit is someone who can design and create simple, beautiful and easy to understand things. He is an expert at taking designs into original, exciting and new directions. </div>  -->
+                        </div>
                       </div>
                     </div>
 
                     <div class="mail-button mail-button2">
-                      <a href="mailto:aeroclubnitte@nmamit.in"><img src="./assets/img/gmailLogo.png" alt="mail"></a>
+                      <a href="mailto:aeroclubnitte@gmail.com"><img src="./assets/img/gmailLogo.png" alt="mail"></a>
                     </div>
 
                   </div>
@@ -1467,7 +1611,7 @@
                     <li class="slider--item slider--item-left">
                       <a href="#0">
                         <div class="slider--item-image">
-                          <img src="./assets/img/coming-soon-see-it-soon.gif" alt="Victory">
+                          <img src="./assets/img/coming-soon-see-it-soon.gif" style="height: 100%; width: 100%;" alt="Victory">
                         </div>
                         <p class="slider--item-title">Coming soon</p>
                         <p class="slider--item-description">
@@ -1551,17 +1695,17 @@
                       <div class="card__head-11">Event 2</div>
                     </div>
                     <div class="card-11">
-                      <a href="./vichaar"><img src="./assets/img/SkyProbe_banner.jpg"></a>
+                      <a href="./skyProbe"><img src="./assets/img/SkyProbe_banner.jpg"></a>
                       <div class="card__head-11">Event 3</div>
                     </div>
                     <div class="card-11">
                       <a href="./vichaar">
                         <img
-                         src="./assets/img/Vichaar.jpg"></a>
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg"></a>
                       <div class="card__head-11">Event 4</div>
                     </div>
                     <div class="card-11">
-                      <a href="./vichaar"> <img src="./assets/img/wwwings.jpg"></a>
+                      <a href="/words_with_wings"> <img src="./assets/img/wwwings.jpg"></a>
                       <div class="card__head-11">Event 5</div>
                     </div>
                   </div>
@@ -1616,50 +1760,50 @@
                             <tr>
                               <td data-label="Account">Vayurvya</td>
                               <td data-label="Due Date">Divyamshu YN</td>
-                              <td data-label="Amount">9113589277</td>
-                              <td data-label="Period">divyamshuny@gmail.com</td>
+                              <td data-label="Amount">+91 9113589277</td>
+                              <td data-label="Period">Divyamshu@gmail.com</td>
                             </tr>
                             <tr>
                               <td scope="row" data-label="Account">Vayurvya</td>
                               <td data-label="Due Date">Suhana Shetty</td>
-                              <td data-label="Amount">8296942783</td>
-                              <td data-label="Period">shettysuhana26@gmail.com</td>
+                              <td data-label="Amount">+91 8296942783</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
                               <td scope="row" data-label="Account">Marketing Head</td>
                               <td data-label="Due Date">Sharanya Acharya</td>
-                              <td data-label="Amount">9591133587</td>
-                              <td data-label="Period">sharuacharya05@gmail.com</td>
+                              <td data-label="Amount">+91 9591133587</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
-                              <td scope="row" data-label="Acount">Event1</td>
+                              <td scope="row" data-label="Acount">AeroX</td>
                               <td data-label="Due Date">Pannagesha Vishwa Mithra</td>
-                              <td data-label="Amount">9448220449</td>
-                              <td data-label="Period">aeromithra123@gmail.com</td>
+                              <td data-label="Amount">+91 9448220449</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
-                              <td scope="row" data-label="Acount">Event2</td>
+                              <td scope="row" data-label="Acount">RotorCraft</td>
                               <td data-label="Due Date">Sanketh KK</td>
-                              <td data-label="Amount">9483064681</td>
-                              <td data-label="Period">sanketh2627@gmail.com</td>
+                              <td data-label="Amount">+91 9483064681</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
-                              <td scope="row" data-label="Acount">Event3</td>
+                              <td scope="row" data-label="Acount">SkyProbe</td>
                               <td data-label="Due Date">Rithesh Shetty</td>
-                              <td data-label="Amount">9731477827</td>
-                              <td data-label="Period">ritheshs667@gmail.com</td>
+                              <td data-label="Amount">+91 9731477827</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
-                              <td scope="row" data-label="Acount">Event4</td>
+                              <td scope="row" data-label="Acount">Vichaar</td>
                               <td data-label="Due Date">Sathwik Poojary</td>
-                              <td data-label="Amount">8151064788</td>
-                              <td data-label="Period">sathvikemmannu@gmail.com</td>
+                              <td data-label="Amount">+91 8151064788</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                             <tr>
-                              <td scope="row" data-label="Acount">Event5</td>
+                              <td scope="row" data-label="Acount">Words With Wings</td>
                               <td data-label="Due Date">Nideesh Poojary</td>
-                              <td data-label="Amount">8867504202</td>
-                              <td data-label="Period">nidheeshpoojary16@gmail.com</td>
+                              <td data-label="Amount">+91 8867504202</td>
+                              <td data-label="Period">test@gmail.com</td>
                             </tr>
                           </tbody>
                         </table>
@@ -1685,12 +1829,11 @@
                               alt="LinkedIN"></a>
                           <a href="https://www.aeroclubnitte.in"> <img src="./assets/img/world-wide-web.png"
                               style="height: 30px; width: 30px;padding: 30px;" alt="aeroclubnitte.in"></a>
-                          <a href="mailto:aeroclubnitte@nmamit.in"><img
+                          <a href="https://www.mail.google.com/aeroclubnitte@nmamit.in"><img
                               src="./assets/img/gmailLogo.png" style="height: 30px; width: 30px; padding: 30px;"
                               alt="Gmail"></a>
-                          <a href="https://maps.app.goo.gl/Ume9bXqfH4wnoTbA9">
                           <img src="./assets/img/adressLogo.png" style="height: 30px; width: 30px; padding: 30px;"
-                            alt="3rd FLOOR - JNANA SAUDHA"></a>
+                            alt="Gmail">
 
                         </div>
 
@@ -1794,7 +1937,8 @@
       }
     }, 1000);
   </script>
-   <script>
+
+  <script>
     function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
