@@ -37,6 +37,9 @@ app.get("/projects",(req,res)=>{
 app.get("/gallery",(req,res)=>{
     res.render("gallery.ejs");
 });
+app.get("/team",(req,res)=>{
+    res.render("team.ejs");
+});
 
 
 app.get("/", (req, res) => {
