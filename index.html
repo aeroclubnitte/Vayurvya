@@ -4,7 +4,7 @@
 <head>
   <title>Vayurvya</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="HTML5 website template">
   <meta name="keywords" content="global, template, html, sass, jquery">
@@ -22,8 +22,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Ewert&family=Josefin+Sans&family=Jost&family=Mulish&family=Poppins:wght@600&display=swap"
     rel="stylesheet">
+    
 
   <style>
+    /* .divscroll {
+overflow:auto;
+height:100%;
+width:100%;
+} */
     body {
       width: 100%;
       height: auto;
@@ -116,9 +122,152 @@
       #address_ {
         margin-top: 5%;
       }
+      .slideshow-container {
+     position: relative;
+     padding-top: 10vw;
+  /* background: #f1f1f1f1; */
+  background-image: url('/assets/img/about_background.jpeg');
+ 
     }
 
+/* Slides */
+   .mySlides {
+  display: none;
+  padding: 10vw; 
+  text-align: center;
+  font-size: 3vw;
+
+     }
+
+/* Next & previous buttons */
+     .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: lighter;
+  font-size: 1vw;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+   }
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.5vw;
+  width: 0.5vw;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+    }
+
+    .slideshow-container {
+     position: relative;
+  /* background: #f1f1f1f1; */
+  background-image: url('/assets/img/about_background.jpeg');
+  
+  
+  
+    }
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 5vw; 
+  text-align: center;
+  font-size: medium;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: lighter;
+  font-size: 1vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.5vw;
+  width: 0.5vw;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+#mobile_view_content{
+	display:none;
+}
+
     /* making it responsive */
+   
     @media only screen and (max-width: 468px) {
       .floating_astro {
         display: none;
@@ -129,6 +278,28 @@
         font-size: 12px;
       }
 
+      .work{
+       margin-top:-5em !important;
+
+      }
+	    
+
+     .about-me{
+        margin-left:  -0.35% !important;
+      }
+
+      .about-me .vayu_logo{
+        height: 50% !important;
+        width: 90% !important;
+      }
+     
+      .slideshow-container  .mySlides p{
+        font-size: 3.5vw !important;
+      }
+
+      .slideshow-container{
+        margin-top: 10vw;
+      }
 
       l-wrapper {
         width: 50%;
@@ -147,22 +318,166 @@
         margin-left: -60%;
         margin-top: 60%;
       }
+ 
+      .slideshow-container {
+     position: relative;
+     padding-top: 10vw;
+  /* background: #f1f1f1f1; */
+ 
+  
+    }
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 5vw; 
+  text-align: center;
+  font-size: 3vw;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: lighter;
+  font-size: 4vw;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.5vw;
+  width: 0.5vw;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
 
     }
 
 
     @media only screen and (min-width: 768px) and (max-width: 1268px) {
 
-
+      #mobile_view_content{
+	      display:none;
+      }
       /* Styles for screens between 768px and 1023px */
       body {
         font-size: 14px;
+      }
+
+      .about-me{
+        margin-left:  0.75% !important;
       }
 
       .about {
         display: inline-block;
         flex-direction: column;
       }
+   
+      .slideshow-container {
+     position: relative; 
+     padding-top: 10vw;
+  /* background: #f1f1f1f1; */
+  background-image: url('/assets/img/about_background.jpeg');
+ 
+    }
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 5vw; 
+  text-align: center;
+  font-size: large;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: lighter;
+  font-size: 1vw;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.5vw;
+  width: 0.5vw;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
     }
 
 
@@ -581,200 +896,23 @@
     }
 
 
-
-
-    .container-1111 {
-      max-width: 150px;
-      padding: 0px 36px;
-    }
-
-
-    @media (min-width: 1200px) and (max-width: 1441px) {
-      .container-1111 {
-        max-width: 1250px;
-        padding: 0px 36px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .container-1111 {
-        padding: 0px 30px;
-      }
-    }
-
-    @media (max-width: 479px) {
-      .container-1111 {
-        padding: 0px 30px 0px 20px;
-      }
-    }
-
     .about-me {
       padding-top: 50px;
       padding-bottom: 50px;
     }
 
-    .about-me .about-me-container {
-      position: relative;
-    }
-
-    @media (max-width: 960px) {
-      .about-me .about-me-container {
-        padding-bottom: 100px;
-      }
-    }
-
-    .about-me .about-me-container .about-me-title {
-      font-size: 55px;
-      color: #87A4B6;
-      font-weight: 700;
-    }
-
+    
     @media (max-width: 500px) {
-      .about-me .about-me-container .about-me-title {
-        font-size: 30px;
-      }
-    }
-
-    .about-me-flex-container {
-      margin-top: -25px;
-      margin-left: 150px;
-      left: 100px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @media (max-width: 960px) {
-      .about-me-flex-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0px;
-        gap: 50px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .about-me-flex-container {
-        margin-top: -10px;
-      }
-
-      .mail-button.mail-button2 {
-        display: none;
-
-      }
-
-    }
-
-    .about-me-flex-container .about-me-image {
-      position: relative;
-      width: 400px;
-      height: 400px;
-    }
-
-    @media (max-width: 500px) {
-      .about-me-flex-container .about-me-image {
-        width: 300px;
-        height: 300px;
-      }
-    }
-
-    .about-me-flex-container .about-me-image .back-div {
-      position: absolute;
-      bottom: 0;
-      z-index: -3;
-      background-color: #013747;
-      width: 80%;
-      height: 80%;
-    }
-
-    .about-me-flex-container .about-me-image .black-image {
-      z-index: -2;
-      position: absolute;
-      left: 10px;
-      bottom: 10px;
-      height: 100%;
-    }
-
-    .about-me-flex-container .about-me-image .black-image img {
-      height: 100%;
-    }
-
-    .about-me-flex-container .about-me-image .main-image {
-      width: 70%;
-      height: 70%;
-      overflow: hidden;
-      position: absolute;
-      left: 25%;
-      top: 5%;
-      box-shadow: rgb(0, 0, 0) 0px 7px 50px 0px;
-      transition: all 0.2s ease-out;
-    }
-
-    .about-me-flex-container .about-me-image .main-image:hover {
-      transform-origin: top center;
-      transform: scale(1.5);
-      border-radius: 25px;
-    }
-
-    .about-me-flex-container .about-me-image .main-image img {
-      transform-origin: center center;
-      transform: scale(2);
-      -o-object-fit: cover;
-      object-fit: cover;
-      transition: all 0.2s ease-out;
-    }
-
-    .about-me-flex-container .about-me-image .main-image img:hover {
-      transform: scale(1);
-    }
-
-    .about-me-flex-container .about-me-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-      flex: 0 0 40%;
-    }
-
-    @media (max-width: 960px) {
-      .about-me-flex-container .about-me-content {
-        flex-direction: row-reverse;
-      }
-    }
-
-    .about-me-flex-container .about-me-content .logo {
-      max-width: 400px;
-    }
-
-    .about-me-flex-container .about-me-content .logo img {
-      filter: drop-shadow(0 0 25px rgb(0, 0, 0));
-    }
-
-    @media (max-width: 500px) {
-      .about-me-flex-container .about-me-content .logo img {
-        transform: rotateZ(90deg);
-        display: none;
-      }
-
       .intro a {
        margin-top: 15px;
         font-size: 12px;
         margin-left: -21%;
       }
+ 
 
       .header .button-10a a {
         display: none;
       }
-
-
-      .about-me-flex-container .text {
-        font-size: 16px !important;
-        width: 400px;
-        margin-left: 15%;
-        margin-top: 5% !important;
-      }
-
-
       .intro h2{
 
         margin-top: 135px !important ;
@@ -791,13 +929,6 @@
 
     }
 
-
-    .about-me-flex-container .about-me-content .text {
-         color: #87A4B6;
-      font-weight: 600;
-      margin-top: 5%;
-      font-size: 15px;
-    }
 
 
     @media only screen and (max-width:376px) {
@@ -828,9 +959,7 @@
       border-radius: 5px;
     }
 
-    .about-me-content .firstline{
-      font-size: 10px;
-    }
+   
 
       .intro h2 {
         display: none;
@@ -842,40 +971,13 @@
       
       }
 
-      .about-me-title {
-        font-size: 30px !important; 
-        margin-left: -2%;
-        margin-top: -5% !important;
-      }
-
-      .about-me-flex-container {
-        height: 800px;
-        width: 400px;
-        margin-left: -42%;
-        margin-top: -90% !important;
-
-      }
  
       .container-11 .card-11 {
       flex: 1;
       transition: all 1s ease-in-out;
       height: 80vmin;
       position: relative;
-    }
-
-
-
-      .container-10022 h1 {
-      font-family: 'Lato', sans-serif;
-      text-align: center;
-      margin-top: 2em;
-      font-size: 0.25em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-left: -1%;
-      color: #F6F4F3;
-    }
-
+    }    
     table td, tr{
 
       font-size: 8px;
@@ -885,46 +987,10 @@
       #myBtn{
         display: none;
       }
-
-      .about-me-flex-container .about-me-image {
-        margin-top: -20% !important;
-        height: 250px;
-        width: 250px;
-      }
-
-      .about-me-flex-container .text {
-        height: 200px !important;
-        width: 400px;
-        margin-top: 30px !important;
-
-
-      }
-
-      .about-me-flex-container .text .firstline {
-        margin-top: -18% !important;
-        font-size: 13px;
-
-      }
-
-      .about-me-flex-container .text .secondline {
-        display: none;
-      }
+ .mySlides{
+  font-size: 3vw;
+ }
       
-    }
-
-    @media only screen and (min-width:768px) and (max-width:978px){
-      .about-me-flex-container .about-me-image{
-
-        margin-left:-10% !important;
-
-      }
-      .about-me-flex-container .text {
-        height: 200px !important;
-        width: 400px;
-        margin-top: 30px !important;
-
-
-      }
     }
 
     @media screen and (max-width: 600px) {
@@ -935,17 +1001,6 @@
     }
 
     @media only screen and (max-width: 391px) {
-
-
-
-       .about-me-flex-container .about-me-content .firstline , .secondline {
-        font-size: 15px;
-        margin-top:-6%;
-      }
-      .about-me-flex-container .about-me-content  .secondline{
-		     margin-top:1%;
-	     }
-
       .container-10022 {
 
         overflow: hidden;
@@ -970,42 +1025,14 @@
       height: 80vmin;
       position: relative;
     }
-
-      .about-me-title {
-        font-size: 2px;
-        margin-left: -2%;
-      }
-
-      .about-me-flex-container {
-        height: 800px;
-        width: 470px;
-        margin-left: -40%;
-        margin-top: -20% !important;
-      }
-
-      .about-me-flex-container .text {
-        font-size: 17px !important;
-        width: 400px;
-        margin-left: 20%;
-        margin-top: 10% !important;
-      }
-
+    .mySlides{
+      font-size: 3vw;
+    }
+    
     }
 
 
      @media only screen and (max-width: 500px) {
-      .about-me-flex-container .about-me-content .firstline , .secondline {
-        font-size: 15px;
-        margin-top:-4%;
-      }
-	     .about-me-flex-container .about-me-content  .secondline{
-		     margin-top:1%;
-	     }
-
-      .about-me-flex-container .about-me-image {
-        margin-top: 7%;
-      }
-
         .scroll{
         margin-left: 46% !important;
       }
@@ -1040,20 +1067,9 @@
         width: 35px;
         border-radius: 5px;
       }
+    
 
-
-      .about-me-container {
-        justify-content: space-between;
-        margin-top: 18%;
-      }
-
-      .about-me-container .about-me-title {
-        margin-top: -22%;
-      }
-
-      .about-me-container {
-        margin-top: 15%;
-      }
+    
 
 
       .intro .container-10022 {
@@ -1063,6 +1079,9 @@
 
       .intro h2 {
         margin-top: 43%;
+      }
+      .mySlides{
+        font-size: 3vw;
       }
     }
 
@@ -1350,10 +1369,10 @@
 	}
 }
 
-.scroll {
+/* .scroll {
 	width: 60px;
 	height: 60px;
-	border: 2px solid white
+	border: 2px solid white;
 	border-radius: 50%;
 	position: relative;
 	animation: down 1.5s infinite;
@@ -1369,7 +1388,7 @@
   	border-bottom: 2px solid white;
 		transform: rotate(-45deg);
 	}
-}
+} */
 
 @keyframes down {
 	0% {
@@ -1411,7 +1430,7 @@
     width: 1px;
     height: 10px;
 		
-		// triangle
+	
     border-top: 10px solid white;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -1454,14 +1473,14 @@
     </a>
     <p class="device-notification--message">It will be responsive soon.</p>
   </div> -->
-
+<div class="divscroll">
   <div class="perspective effect-rotate-left">
     <div class="container">
       <div class="outer-nav--return"></div>
       <div id="viewport" class="l-viewport" style="background-image: url(./assets/img/new.gif);">
         <div class="l-wrapper">
           <header class="header">
-            <a class="header--logo" href="#0">
+            <a class="header--logo" href="https://aeroclubnitte.in/">
               <img src="./assets/img/aclogo-removebg-preview.png" style="height: 50px;" alt="Aero_logo">
               <p>AEROCLUB NITTE</p>
             </a>
@@ -1479,7 +1498,7 @@
               <span></span>
             </div>
           </header>
-          <nav class="l-side-nav">
+          <nav class="l-side-nav" >
             <ul class="side-nav">
               <li class="is-active"><span>Home</span></li>
               <li><span style="font-family: 'Public Sans', sans-serif;">About us</span></li>
@@ -1551,7 +1570,7 @@
                     
                 </div>
 
-                <div class="scroll" style=" margin-left: 48%; height: 20px; width: 20px; margin-top: -3%;"></div>
+                <div  style=" margin-left: 48%; height: 20px; width: 20px; margin-top: -3%;"></div>
 
 
                 <div class="intro--options">
@@ -1570,58 +1589,58 @@
 
 
             <li class="l-section section">
-              <section class="about-me" id="about-me " style="width: 80%; margin-left: 10%; margin-top: 3%;">
-                <div class=".container-1111">
-                  <div class="about-me-container">
-                    <div class="about-me-title" style="font-family: 'Kanit', sans-serif; margin-top: 0%;">
-                      About Vayurvya
-                    </div>
+		    <div class="work">
+			  
+              <section class="about-me" id="about-me " style="width: 100%; margin-left: 4%; margin-top: 3%;">
+                  
+                     <center>
+                    <img src="./assets/img/Vayurvya_Logo.png"
+                  style="height: 10vw; width: 20vw; " class="vayu_logo"
+                  alt="Vayurvya_logo" style="position:absolute;">
+                   </center>
+                  
+                    <div class="slideshow-container" >
 
-                    <div class="about-me-flex-container" style="margin-top: 2%;">
-                      <div class="about-me-image">
-                        <div class="back-div"></div>
-                        <div class="black-image"><img src="/assets/img/latestpics001.png" alt="black"></div>
-                        <div class="main-image"><img src="/assets/img/latestpics001.png" style="height: 300px;"
-                            alt="smit"></div>
-                      </div>
-                      <div class="about-me-content" style="margin-top: -13%;">
-
-                        <div class="logo" style="margin-bottom: -8%;"><img
-                            src="/assets/img/ac_logo-removebg-preview1.png" alt="smit"></div>
-
-                        <div class="text">
-                          <div class="firstline"> Welcome to Vayurvya, a celebration of a decade of excellence by Aero
-                            Club Nitte! In honor of our 10th-year anniversary, we proudly present a national-level
-                            competition featuring thrilling RC modeling contests, enlightening talks, engaging paper
-                            presentations, and a host of other exciting events.<span id="dots">...</span></div>
-                             
-
-                            <span id="more"> <div class="secondline"> Let's make Vayurvya a
-                            testament to our passion for aviation and the remarkable journey of Aero Club Nitte. </div></span>
-                            
-                            <button onclick="myFunction()" id="myBtn" style="background-color: transparent; border: 0px;">Read more...</button>
-
-
-
-                          <!-- <div class="secondline"> Smit is someone who can design and create simple, beautiful and easy to understand things. He is an expert at taking designs into original, exciting and new directions. </div>  -->
+                      <div class="mySlides" >
+                        <p style="font-size:1.5vw; ">Vayurvya, a prestigious national-level technical event,
+                          commemorates Aeroclub Nitte’s extraordinary decade-long journey. Join us in celebrating
+                          noteworthy achievements, groundbreaking innovations, and impactful contributions marking the
+                          ten-year expedition of Aeroclub-Nitte. It's not merely an event; it's a celebration of
+                          passion, a nexus of ideas, and an invitation to be part of a nationwide community of
+                          visionaries and innovators</p>
                         </div>
+                      
+                      <div class="mySlides">
+                        <p style="font-size:1.5vw;"><span id="mobile_view_content">This distinguished national-level technical event is the convergence of aviation and technology, tailored for tech enthusiasts, students, professionals, and our expansive community. Unfolding a vibrant tapestry of opportunities across multiple domains, it creates a dynamic space for collaboration, learning, and connection with techies nationwide, fostering shared knowledge and innovation at this extraordinary gathering.</span>This distinguished national-level technical event marks the
+                          convergence of aviation and technology, tailored for tech enthusiasts, students,
+                          professionals, and our expansive community. Unfolding a vibrant tapestry of opportunities
+                          across diverse domains, it provides a dynamic space for collaboration, learning, and
+                          connection with techies nationwide. Join us in fostering shared knowledge and innovation at
+                          this extraordinary gathering</p>
                       </div>
-                    </div>
-
-                    <div class="mail-button mail-button2">
-                      <a href="mailto:aeroclubnitte@nmamit.in"><img src="./assets/img/gmailLogo.png" alt="mail"></a>
-                    </div>
-
-                  </div>
-
-                </div>
+                      
+                      <div class="mySlides">
+                        <p style="font-size:1.5vw;">Experience the joyous union of aeromodelling enthusiasts and
+                          seasoned tech experts. Dive into thrilling competitions highlighting exceptional skills and
+                          boundless creativity. Immerse yourself in enlightening talks by renowned speakers and aviation
+                          experts. Join a nationwide gathering of passionate participants for an unforgettable event,
+                          where innovation, skill, and enthusiasm converge for an unparalleled celebration of aviation
+                          and technology </p>
+                      </div>
+                      
+                      <a class="prev" onclick="plusSlides(-1)">❮</a>
+                      <a class="next" onclick="plusSlides(1)">❯</a>
+                      
+                      </div>
+                      
+                      <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                      </div>                   
+              
               </section>
-
-
-              <br><br>
-
-
-
+		    </div>
 
             </li>
 
@@ -1710,7 +1729,7 @@
 
                   <div class="container-11" style="margin-right:-19%; margin-left: -15%;">
                     <div class="card-11">
-                      <a href="./events"><img src="./assets/img/AeroX_initial.jpg"></a>
+                      <a href="/aerox"><img src="./assets/img/AeroX_initial.jpg"></a>
                       <div class="card__head-11">AeroX</div>
                     </div>
                     <div class="card-11">
@@ -1754,7 +1773,7 @@
                   <div class="col-lg-6">
 
                     <div class="container_form"
-                      style="display: flex; flex-direction:column; justify-content: space-around; margin-top: 6%; margin-left: 0%; ">
+                      style="display: flex; flex-direction:column; justify-content: space-around; margin-top: 6%; margin-left: 2%; ">
 
 
 
@@ -1861,38 +1880,12 @@
                             alt="3rd FLOOR - JNANA SAUDHA"></a>
 
                         </div>
-
-
-
-
-
-
                       </div>
-
-
-
-                    </div>
-
+		    </div>
                   </div>
-
-
-
-
-
-
-
-                </div>
-
+		</div>
             </li>
-
-
-
-
-
-
-
-
-          </ul>
+	</ul>
         </div>
       </div>
     </div>
@@ -1902,8 +1895,8 @@
       <li>Guests</li>
       <li>Events</li>
       <li>Contact Us</li>
-    </ul>
-  </div>
+    </ul> 
+  </div></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
@@ -1926,10 +1919,39 @@
     // Preload all the images in the page
     imagesLoaded(document.querySelectorAll('.intro_img, .reel_img'), { background: true }, () => document.body.classList.remove('loading'));
   </script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
 
   <script>
-    // Target date (26th January 2024)
-    const targetDate = new Date(new Date().getFullYear() + 1, 0, 26).getTime();
+    // Target date (2nd February 2024)
+    const targetDate = new Date(new Date().getFullYear() + 1, 1, 2).getTime();
 
     // Update the countdown every second
     let timer = setInterval(function () {
@@ -1980,7 +2002,7 @@
   }
 }
   </script>
-
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
