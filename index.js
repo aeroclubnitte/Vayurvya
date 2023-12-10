@@ -58,7 +58,9 @@ app.get("/contact",(req,res)=>{
 app.get("/register",(req,res)=>{
     res.render("register.ejs");
 });
-
+ app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, 'aerox.html'));
+  });
  app.get("/aerox", (req, res) => {
     res.sendFile(path.join(__dirname, 'aerox.html'));
   });
