@@ -3533,19 +3533,19 @@ button {
      color: #0c0c0e;
 }
 
-.footer {
+.footer-11 {
      margin-top: 265px;
      background: #242423;
      padding-top: 85px;
      text-align: center;
 }
 
-.footer .titlepage {
+.footer-11 .titlepage {
      text-align: left;
      padding-bottom: 10px;
 }
 
-.footer .titlepage h2 {
+.footer-11 .titlepage h2 {
      color: #fff;
 }
 
@@ -3568,24 +3568,24 @@ button {
      padding-top: 20px;
 }
 
-.copyright {
+.copyright-11 {
      margin-top: 90px;
      padding: 20px 0px;
      background-color: #fff;
 }
 
-.copyright p {
+.copyright-11 p {
      color: #020203;
      font-size: 18px;
      line-height: 22px;
      text-align: center;
 }
 
-.copyright a {
+.copyright-11 a {
      color: #020203;
 }
 
-.copyright a:hover {
+.copyright-11 a:hover {
      color: #eec237;
 }
 
