@@ -59,6 +59,10 @@ app.get("/register",(req,res)=>{
     res.render("register.ejs");
 });
 
+ app.get("/aerox", (req, res) => {
+    res.sendFile(path.join(__dirname, 'aerox.html'));
+  });
+
 app.get("/aeroX", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'aeroX.html'));
   });
