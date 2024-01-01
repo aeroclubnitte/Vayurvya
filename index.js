@@ -69,6 +69,15 @@ app.get("/register",(req,res)=>{
     res.sendFile(path.join(__dirname, 'rotorcraft.html'));
   });
 
+app.get("/skyprobe", (req, res) => {
+    res.sendFile(path.join(__dirname, 'skyprobe.html'));
+  });
+app.get("/vichaar", (req, res) => {
+    res.sendFile(path.join(__dirname, 'vichaar.html'));
+  });
+app.get("/words_with_wings", (req, res) => {
+    res.sendFile(path.join(__dirname, 'wordsWithWings.html'));
+  });
 app.get("/aeroX", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'aeroX.html'));
   });
@@ -78,14 +87,17 @@ app.get("/aeroX", (req, res) => {
   app.get("/skyProbe", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'skyProbe.html'));
   });
-  app.get("/events", (req, res) => {
+ app.get("/vichaar", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'vichaar.html'));
   });
+ 
   app.get("/words_with_wings", (req, res) => {
     res.sendFile(path.join(__dirname, 'events_vayu', 'wordsWithWings.html'));
   });
   
-  
+   app.get("/events", (req, res) => {
+    res.sendFile(path.join(__dirname, 'events_vayu', 'events.html'));
+  });
 
 
 app.post("/mail",(req,res)=>{
