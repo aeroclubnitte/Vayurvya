@@ -42,13 +42,19 @@ width:100%;
       height: auto;
     }
 
-    /* ContactUs_table */
+    
+ /* ContactUs_table */
 
 
-    .container_form_sub {
-      margin-left: -5%;
-
+    .contactUsall{
+      margin-top: -15%;
+      margin-left: 5% !important;
     }
+
+    /* .container_form_sub {
+      margin-left: 5%;
+      
+    } */
 
     table {
       border: 1px solid #ccc;
@@ -82,14 +88,53 @@ width:100%;
       text-transform: uppercase;
     }
 
-    @media screen and (max-width: 600px) {
+    
+    @media screen and (min-width:768px) and (max-width:1320px)
+    {
+      .contactUsall{
+        margin-left: -4% !important;
+        margin-top: 5%;
+      }
+
+      table th {
+      font-size: .65em;
+      letter-spacing: 0em;
+      text-transform: uppercase;
+    }
+
+    table tr {
+      background-color: transparent;
+      border: 1px solid #ddd;
+      padding: -5% !important;
+      border-radius: 4%;
+    }
+
+    table td{
+      font-size: 0.9em;
+      padding: -15% !important;
+    }
+
+    table th,
+    table td {
+      padding: .425em;
+      text-align: center;
+      font-size: .8em;
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .contactUsall{
+        margin-left: -3.5% !important;
+        margin-top: 5%;
+      }
 
       table {
         border: 0;
       }
 
       table caption {
-        font-size: 1.3em;
+        font-size: 1.1em;
       }
 
       table thead {
@@ -107,6 +152,11 @@ width:100%;
         justify-content: space-between;
         display: flex;
         margin-bottom: .625em;
+        /* padding: 5%; */
+        background-color: transparent;
+        border: 1px solid #ddd;
+        padding: .15em;
+        border-radius: 4%;
       }
 
       table td {
@@ -116,7 +166,7 @@ width:100%;
       }
 
       table td::before {
-       
+
         float: none;
         font-weight: bold;
         text-transform: uppercase;
@@ -126,79 +176,103 @@ width:100%;
         border-bottom: 0;
       }
 
+      /* table tr {
+      background-color: transparent;
+      border: 1px solid #ddd;
+      padding: .15em;
+      border-radius: 4%;
+    } */
+
+    table th,
+    table td {
+      padding: .325em;
+      text-align: center;
+    }
+
+    table th {
+      font-size: 1.55em;
+      letter-spacing: 1.2em;
+      text-transform: uppercase;
+    }
+
       #address_ {
         margin-top: 5%;
       }
+
       .slideshow- {
-     position: relative;
-     padding-top: 10vw;
-  /* background: #f1f1f1f1; */
-  background-image: url('/assets/img/about_background.jpeg');
- 
+        position: relative;
+        padding-top: 10vw;
+        /* background: #f1f1f1f1; */
+        background-image: url('/assets/img/about_background.jpeg');
+
+      }
+
+      /* Slides */
+      .mySlides {
+        display: none;
+        padding: 10vw;
+        text-align: center;
+        font-size: 3vw;
+
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -30px;
+        padding: 16px;
+        color: #888;
+        font-weight: lighter;
+        font-size: 1vw;
+        border-radius: 0 2px 2px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        position: absolute;
+        right: 0;
+        border-radius: 2px 0 0 2px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      }
+
+      /* The dot/bullet/indicator  */
+      .dot-container {
+        text-align: center;
+
+        /* background: #ddd; */
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 0.5vw;
+        width: 0.5vw;
+        /* margin: 0 2px; */
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      /* Add a background color to the active dot/circle */
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
     }
 
-/* Slides */
-   .mySlides {
-  display: none;
-  padding: 10vw; 
-  text-align: center;
-  font-size: 3vw;
-
-     }
-
-/* Next & previous buttons */
-     .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
-  font-weight: lighter;
-  font-size: 1vw;
-  border-radius: 0 2px 2px 0;
-  user-select: none;
-   }
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
-/* The dot/bullet/indicator  */
-.dot-container {
-    text-align: center;
-    
-    /* background: #ddd; */
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 0.5vw;
-  width: 0.5vw;
-  /* margin: 0 2px; */
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-    }
 
     .slideshow-container {
      position: relative;
@@ -1820,26 +1894,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- end eventSection -->
 
 
-            <li class="l-section section">
-
-
-
-              <div class="contact--lockup">
-
-
-                <div class="work-request--information">
-                  <div class="col-lg-6">
-
-                    <div class="container_form"
-                      style="display: flex; flex-direction:column; justify-content: space-around; margin-top: 2%; margin-right: -11% !important; ">
-
-		      <div class="work">
-
-
-		      <h2 id="events" style="font-family: 'Kanit', sans-serif;">Contact Us</h2>
-
-
-                      <div class="container_form_sub" style="  backdrop-filter: blur(1px); 
+          <!-- ContactUs section -->
+              <li class="l-section section">
+                <div class="work">
+                  <div class="work--lockup">
+                    <div class="contactUsall">
+                      <h2 id="events" style="font-family: 'Kanit', sans-serif;">Contact Us</h2>
+                    <div class="container_form_sub" style="  backdrop-filter: blur(1px); 
                       background-color: rgba(255, 255, 255, 0.385); 
                       padding: 5px;
                       min-width: 80% !important;
@@ -1849,104 +1910,104 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       text-align: left;
                       border-radius: 4px;">
 
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">Department</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Contact No.</th>
+                            <th scope="col">Email</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-label="Account">Vayurvya</td>
+                            <td data-label="Due Date">Divyamshu YN</td>
+                            <td data-label="Amount">9113589277</td>
+                            <td data-label="Period">divyamshuny@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Account">FinanceHead</td>
+                            <td data-label="Due Date">Suhana Shetty</td>
+                            <td data-label="Amount">8296942783</td>
+                            <td data-label="Period">shettysuhana26@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Account">MarketingHead</td>
+                            <td data-label="Due Date">Sharanya Acharya</td>
+                            <td data-label="Amount">9591133587</td>
+                            <td data-label="Period">sharuacharya05@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Acount">AeroX</td>
+                            <td data-label="Due Date">PV Mithra</td>
+                            <td data-label="Amount">9448220449</td>
+                            <td data-label="Period">aeromithra123@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Acount">Event2</td>
+                            <td data-label="Due Date">Sanketh KK</td>
+                            <td data-label="Amount">9483064681</td>
+                            <td data-label="Period">sanketh2627@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Acount">Event3</td>
+                            <td data-label="Due Date">Rithesh Shetty</td>
+                            <td data-label="Amount">9731477827</td>
+                            <td data-label="Period">ritheshs667@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Acount">Event4</td>
+                            <td data-label="Due Date">Sathwik Poojary</td>
+                            <td data-label="Amount">8151064788</td>
+                            <td data-label="Period">sathvikemmannu@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td scope="row" data-label="Acount">Event5</td>
+                            <td data-label="Due Date">Nideesh Poojary</td>
+                            <td data-label="Amount">8867504202</td>
+                            <td data-label="Period">nidheeshpoojary16@gmail.com</td>
+                          </tr>
 
-                        <table>
-                          <thead>
-                            <tr>
-                              <th scope="col">Department</th>
-                              <th scope="col">Name</th>
-                              <th scope="col">Contact No.</th>
-                              <th scope="col">Email</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td data-label="Account">Vayurvya</td>
-                              <td data-label="Due Date">Divyamshu YN</td>
-                              <td data-label="Amount">9113589277</td>
-                              <td data-label="Period">divyamshuny@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Account">FinanceHead</td>
-                              <td data-label="Due Date">Suhana Shetty</td>
-                              <td data-label="Amount">8296942783</td>
-                              <td data-label="Period">shettysuhana26@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Account">MarketingHead</td>
-                              <td data-label="Due Date">Sharanya Acharya</td>
-                              <td data-label="Amount">9591133587</td>
-                              <td data-label="Period">sharuacharya05@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Acount">AeroX</td>
-                              <td data-label="Due Date">PV Mithra</td>
-                              <td data-label="Amount">9448220449</td>
-                              <td data-label="Period">aeromithra123@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Acount">RotorCraft</td>
-                              <td data-label="Due Date">Sanketh KK</td>
-                              <td data-label="Amount">9483064681</td>
-                              <td data-label="Period">sanketh2627@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Acount">SkyProbe</td>
-                              <td data-label="Due Date">Rithesh Shetty</td>
-                              <td data-label="Amount">9731477827</td>
-                              <td data-label="Period">ritheshs667@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Acount">Vichaar</td>
-                              <td data-label="Due Date">Sathwik Poojary</td>
-                              <td data-label="Amount">8151064788</td>
-                              <td data-label="Period">sathvikemmannu@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td scope="row" data-label="Acount">Words With Wings </td>
-                              <td data-label="Due Date">Nideesh Poojary</td>
-                              <td data-label="Amount">8867504202</td>
-                              <td data-label="Period">nidheeshpoojary16@gmail.com</td>
-                            </tr>
+                        </tbody>
+                      </table>
 
-                          </tbody>
-                        </table>
-
-		
+                    </div>
 
 
-                      </div>
+                 
 
-                      <div class="container_form_sub" style="margin-bottom: -18%;">
+                    <div class="container_form_sub" style="margin-bottom: -18%;">
 
-                        <!-- <div id="container_form_sub01">
+                      <!-- <div id="container_form_sub01">
                           <h1 style="font-size: 60px;">Contact us </h1>
                           <img src="./assets/img//391048893-orig-unscreen.gif" style="height: 100px; width: 80%; margin-left: 0%;" alt="">
 
                         </div> -->
-                        <div class="container_form_sub02"
-                          style="margin-left:0%; display: flex; flex-direction: row; justify-content: space-evenly; ">
-                          <a href="https://www.instagram.com/aeroclubnitte/"><img src="./assets/img/InstagramLogo.png"
-                              style="height: 30px; width: 30px; padding: 30px;" alt="Instagram"></a>
-                          <a href="https://www.linkedin.com/company/aeroclub-nitte/mycompany/"><img
-                              src="./assets/img/linkedinLogo.png" style="height: 30px; width: 30px; padding: 30px;"
-                              alt="LinkedIN"></a>
-                          <a href="https://www.aeroclubnitte.in"> <img src="./assets/img/world-wide-web.png"
-                              style="height: 30px; width: 30px;padding: 30px;" alt="aeroclubnitte.in"></a>
-                          <a href="mailto:aeroclubnitte@nmamit.in"><img
-                              src="./assets/img/gmailLogo.png" style="height: 30px; width: 30px; padding: 30px;"
-                              alt="Gmail"></a>
-                         <a href="https://maps.app.goo.gl/Ume9bXqfH4wnoTbA9">
+                      <div class="container_form_sub02"
+                        style="margin-left:0%; display: flex; flex-direction: row; justify-content: space-evenly; ">
+                        <a href="https://www.instagram.com/aeroclubnitte/"><img src="./assets/img/InstagramLogo.png"
+                            style="height: 30px; width: 30px; padding: 30px;" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/company/aeroclub-nitte/mycompany/"><img
+                            src="./assets/img/linkedinLogo.png" style="height: 30px; width: 30px; padding: 30px;"
+                            alt="LinkedIN"></a>
+                        <a href="https://www.aeroclubnitte.in"> <img src="./assets/img/world-wide-web.png"
+                            style="height: 30px; width: 30px;padding: 30px;" alt="aeroclubnitte.in"></a>
+                        <a href="mailto:aeroclubnitte@nmamit.in"><img src="./assets/img/gmailLogo.png"
+                            style="height: 30px; width: 30px; padding: 30px;" alt="Gmail"></a>
+                        <a href="https://maps.app.goo.gl/Ume9bXqfH4wnoTbA9">
                           <img src="./assets/img/adressLogo.png" style="height: 30px; width: 30px; padding: 30px;"
                             alt="3rd FLOOR - JNANA SAUDHA"></a>
 
-                        </div>
                       </div>
-		     </div>
-		    </div>
+                    </div>
                   </div>
-		</div>
-            </li>
+                  </div>
+                </div>
+              </li>
+              <!-- End ContactUs section -->
+
+		  
 	</ul>
         </div>
       </div>
