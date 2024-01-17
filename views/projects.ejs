@@ -128,11 +128,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   cursor: pointer;
 }
 
-.portfolio-info .tooltip {
+/* .portfolio-info .tooltip {
   position: relative;
-  bottom: 0; /* Set bottom to 0 */
+  bottom: 0; 
   left: 50%;
-  transform: translate(-50%, 7px); /* Adjust the second value to set the distance between the image and tooltip */
+  transform: translate(-50%, 7px); 
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -143,6 +143,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   max-width: 800px;
   max-height: 500px;
   overflow: auto;
+} */
+.portfolio-info .tooltip {
+  position: absolute;
+  top: 100%; /* Set top to 100% to position it at the bottom */
+  left: 50%;
+  transform: translate(-50%, 7px);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+  max-width: 800px;
+  overflow-y: auto; /* Make the tooltip scrollable */
 }
 
 
@@ -182,6 +197,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 30px; /* Adjust top margin as needed for more space */
     }
   }
+  .tooltip {
+    max-width: 100%;
+    width: 100%;
+}
+
+.scrollable-tooltip {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.scrollable-content {
+    padding: 10px;
+}
+
+
 
 
  
@@ -266,29 +296,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container_new">
           <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
     
-          <div class="col-lg-4 col-md-6 filter-app">
+            <div class="col-lg-4 col-md-6 filter-app">
               <div class="portfolio-item">
-                <img src="../img/solarplane.jpg" style="height:315px;" class="img-fluid" alt="">
-                <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
-                  <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
-                      title="App 1"></a></h3>
-                  <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                  <div class="tooltip">
-                    <strong>Solar Powered radio controlled plane</strong><br>
-                    Renewable solar energy powers the RC plane motor, which requires 6-7 volts and 40-60
-amps. To meet this demand, 14
-solar cells with 0.5 volts and 6
-amps panels were installed on the
-aircraft for energy generation.
+                  <img src="../img/solarplane.jpg" style="height: 315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                      <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"></a></h3>
+                      <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                      <div class="tooltip scrollable-tooltip">
+                          <strong>Solar Powered radio controlled plane</strong><br>
+                          <div class="scrollable-content">
+                              Renewable solar energy powers the RC plane motor, which requires 6-7 volts and 40-60 amps. To meet this demand, 14 solar cells with 0.5 volts and 6 amps panels were installed on the aircraft for energy generation.
+                              Renewable solar energy powers the RC plane motor, which requires 6-7 volts and 40-60 amps. To meet this demand, 14 solar cells with 0.5 volts and 6 amps panels were installed on the aircraft for energy generation.
+                            </div>
+                      </div>
                   </div>
-                </div>
-                <div class="project-name">
-            <p>Solar Powered radio controlled plane</p>
-        </div>
+                  <div class="project-name">
+                      <p>Solar Powered radio controlled plane</p>
+                  </div>
               </div>
-            </div>
-
+          </div>
+          
 
 
            
@@ -300,8 +327,10 @@ aircraft for energy generation.
                         title="App 1"></a></h3>
                     <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
+                      
                       <strong>UMANTIS</strong><br>
+                      <div class="scrollable-content">
                       Unmanned aerial navigation
 and terrestrial vehicle
 developed with aerial and
@@ -309,7 +338,7 @@ terrestrial surveillance
 vehicle. A prototype was
 developed of the hybrid
 version.
-                    </div>
+                    </div></div>
                   </div>
                   <div class="project-name">
             <p>UMANTIS</p>
@@ -327,15 +356,16 @@ version.
                         title="App 1"></a></h3>
                     <a href="../img/HAAPS.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
                       <strong>HAAPS</strong><br>
+                      <div class="scrollable-content">
                     
                       High Altitude Aeronautical Platform Station.
                       They are operated in 17-22 km altitude of
                       stratospheric layer. It is developed for long
                       range wireless narrow band and broadband
                       telecommunications as well as broadcasting
-                    </div>
+                    </div></div>
                   </div>
                   <div class="project-name">
             <p>HAAPS</p>
@@ -353,14 +383,15 @@ version.
                         title="App 1"></a></h3>
                     <a href="../img/cropyield.png" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
                       <strong> Aerial Crop Yield Estimator</strong><br>
+                      <div class="scrollable-content">
                       Developing a precise aerial crop
 yield estimator using data from
 UAVs and advanced deep
 learning techniques, such as
 convolutional neural networks.
-                    </div>
+                    </div></div>
                   </div>
                    <div class="project-name">
             <p>Aerial Crop Yield Estimator</p>
@@ -381,14 +412,15 @@ convolutional neural networks.
                       title="App 1"></a></h3>
                   <a href="../img/Health_monitoring_system.jpg" data-gall="portfolioGallery" class="venobox"
                     title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                  <div class="tooltip">
+                  <div class="tooltip scrollable-tooltip">
                     <strong>Aerial Crop Health Monitoring System</strong><br>
+                    <div class="scrollable-content">
                     Utilising the NDVI approach,
 crop health is monitored based
 on the light reflection of
 healthy and unhealthy plants
                   </div>
-                </div>
+                </div></div>
                  <div class="project-name">
             <p>Aerial Crop Health Monitoring System</p>
         </div>
@@ -404,14 +436,15 @@ healthy and unhealthy plants
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
                       <strong> Aerial Pesticide Sprayer</strong><br>
+                      <div class="scrollable-content">
                       This aircraft can access sensitive
                       and hard-to-reach areas, enabling
                       the development of an aerial
                       pesticide sprayer for precise crop
                       protection at a fixed altitude.
-                    </div>
+                    </div></div>
                   </div>
                   <div class="project-name">
             <p>Aerial Pesticide Sprayer</p>
@@ -427,8 +460,9 @@ healthy and unhealthy plants
                         title="App 1"></a></h3>
                     <a href="../img/Hot_airfoil_cutter.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
                       <strong>Hot Wire Airfoil Cutter</strong><br>
+                      <div class="scrollable-content">
                       It is a device based on heating
 principle. The hot wire enables
 to pass through the specifies
@@ -436,7 +470,7 @@ material. It was designed and
 fabricated to obtain airfoil
 structure for the wings.
                     </div>
-                  </div>
+                  </div></div>
                   <div class="project-name">
             <p>Hot Wire Airfoil Cutter</p>
         </div>
@@ -472,10 +506,12 @@ structure for the wings.
                     title="App 1"></a></h3>
             <a href="../img/surveillance_drone.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><b><i
                         class="icofont-square-up"></i></b></a>
-            <div class="tooltip">
+            <div class="tooltip scrollable-tooltip">
                 <strong>Surveillance Drone</strong><br>
-               The 2.5 kg autonomous drone, configured in an H shape, employs a Pixhawk flight controller and Mission Planner for precise surveillance. With a Raspberry Pi onboard computer, it's versatile enough for payload dropping.
-        </div>
+                <div class="scrollable-content">
+
+                  The autonomous drone, weighing approximately 2.5 kg, is configured in an H shape for optimal stability during perimeter surveillance. It employs a Pixhawk flight controller for precise autonomous operations, with Mission Planner serving as the ground control station (GCS). The onboard Raspberry Pi enhances computational capabilities, and the drone is versatile enough for payload dropping.
+                  </div></div>
         <!-- Project name displayed at the bottom outside the tooltip div -->
         
     </div>
@@ -494,11 +530,12 @@ structure for the wings.
                         title="App 1"></a></h3>
                     <a href="../img/Autonomous_plane.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"><b><i class="icofont-square-up"></i></b></a>
-                    <div class="tooltip">
+                    <div class="tooltip scrollable-tooltip">
                       <strong>Autonomous Plane</strong><br>
-                      The autonomous fixed-wing UAV is tailored for medical kit deliveries, flying without human intervention. It's especially valuable in emergencies or remote locations where conventional delivery methods pose challenges.
+                      <div class="scrollable-content">
+                        An autonomous fixed wing UAV for payload dropping and medical kit is an unmanned aerial vehicle that has a fixed wing design and can fly without human intervention to deliver medical supplies or equipment to a desired location. Autonomous fixed wing UAVs can be useful for emergency situations, rural areas, or remote locations where conventional delivery methods are not feasible or safe.
                   </div>
-                </div>
+                </div></div>
                 <div class="project-name">
             <p> Autonomous Plane</p>
         </div>
