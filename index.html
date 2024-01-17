@@ -757,9 +757,9 @@ width:100%;
 
     .button-10a a:hover {
       color: #050f1a;
-      background: blue;
+      background:#183059;;
       border-radius: 3px;
-      box-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
+      box-shadow: 0 0 10px #183059, 0 0 40px #183059, 0 0 80px #183059;
       transition-delay: 600ms;
     }
 
@@ -1578,6 +1578,56 @@ width:100%;
 		height: 40px;
 	}
 } 
+.button-10a {
+      margin-top: 1%;
+      text-align: center;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      opacity: 0.9;
+      border: 2px solid #333;
+      z-index: 1000;
+      max-width: 80%;
+      color:#000;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 900;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .box {
+      border: 2px solid #333;
+      padding: 10px;
+      margin-top: 10px;
+      width: fit-content;
+      height: fit-content;
+
+    }
+    .box a {
+      text-decoration: none; /* Remove underline */
+    }
+
   </style>
 </head>
 
@@ -1691,17 +1741,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     REGISTRATION WILL OPEN SOON!!</a>
                     
                 </div> -->
-<div class="button-10a" style="margin-top: 1%; text-align: center;">
-  <a href="https://forms.gle/abULiNUVXcwVDkhZ7" style="display: inline-block; width: 80%;">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    REGISTER NOW!!
-  </a>
-</div>
-
-
+                <div class="button-10a">
+                  <a href="#" id="showPopup" style="display: inline-block; width: 80%;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    REGISTER NOW!!
+                  </a>
+                </div>
+                
+                <div class="overlay" id="overlay"></div>
+                
+                <div class="popup" id="popup">
+                  <span class="close-btn" onclick="closePopup()">X</span>
+                  <p><strong>Guidelines for Registration:</strong></p>
+                  <ul>
+                    <li>The AeroX and RotorCraft events participants have to register first for the overall event Vayurvya, and then the team has to register for the particular event.</li>
+                    <li>For Vichaar and Skyprobe, only the team captains have to register for the Vayurvya event.</li>
+                  </ul><br>
+                 <center><div class="box">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScn6QfsJ07QImVjnbdZFGajHEYJjfiutQ4UOSeZLj5lZO34QA/viewform" target="_blank">Register for Vayurvya</a>
+                </div></center> 
+                </div>
+                
+                <script>
+                  document.getElementById('showPopup').addEventListener('click', function() {
+                    document.getElementById('overlay').style.display = 'block';
+                    document.getElementById('popup').style.display = 'block';
+                  });
+                
+                  function closePopup() {
+                    document.getElementById('overlay').style.display = 'none';
+                    document.getElementById('popup').style.display = 'none';
+                  }
+                </script>
+                
 
                 <div  style=" margin-left: 48%; height: 20px; width: 20px; margin-top: -3%;"></div>
 
