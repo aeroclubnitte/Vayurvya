@@ -42,6 +42,9 @@ app.get("/team", (req, res) => {
 app.get("/achievement", (req, res) => {
   res.render("achievement.ejs");
 });
+app.get("/privacy-policy", (req, res) => {
+  res.render("privacy-policy.ejs");
+});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
