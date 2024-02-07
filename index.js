@@ -80,7 +80,7 @@ app.get("/vichaar", (req, res) => {
   res.sendFile(path.join(__dirname, "vichaar.html"));
 });
 app.get("/words_with_wings", (req, res) => {
-  res.sendFile(path.join(__dirname, "wordsWithWings.html"));
+  res.sendFile(path.join(__dirname, "WordsWithWings.html"));
 });
 app.get("/aeroX", (req, res) => {
   res.sendFile(path.join(__dirname, "events_vayu", "aeroX.html"));
