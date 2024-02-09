@@ -1104,6 +1104,10 @@ width:100%;
  }
       
     }
+    .intro h2 {
+        content-visibility: hidden;
+      }
+    
 
     @media screen and (max-width: 600px) {
       .text {
@@ -1684,7 +1688,20 @@ width:100%;
                 opacity: 0;
             }
         }
-        
+        @keyframes fadeIn {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animated-message {
+    font-size: 18px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease; /* Adjust the duration and timing function as needed */
+  }
   </style>
    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
    <!-- Include Owl Carousel CSS and JS -->
@@ -2357,7 +2374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     // Target date (9th February 2024)
-    const targetDate = new Date(new Date().getFullYear(), 1, 9,7).getTime();
+    const targetDate = new Date(new Date().getFullYear(), 1, 9,6,30).getTime();
 
 
     // Update the countdown every second
@@ -2386,9 +2403,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class=\"seconds\"> \
         <div class=\"numbers\">" + seconds + "</div>seconds</div>";
       } else {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "Countdown is over!";
-      }
+  clearInterval(timer);
+  const timerElement = document.getElementById("timer");
+  const message = "Event is Live Now!!";
+  const messageLength = message.length;
+  let currentIndex = 0;
+
+  function displayMessage() {
+    if (currentIndex < messageLength) {
+      timerElement.innerHTML = "<div class='animated-message'>" + message.substring(0, currentIndex + 1) + "</div>";
+      currentIndex++;
+      setTimeout(displayMessage, 100); // Adjust the delay (in milliseconds) to control the speed
+    } else {
+      setTimeout(startAnimation, 2000); // Restart the animation after 3 seconds
+    }
+  }
+
+  function startAnimation() {
+    currentIndex = 0;
+    displayMessage();
+  }
+
+  displayMessage();
+}
     }, 1000);
   </script>
 
